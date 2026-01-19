@@ -198,11 +198,11 @@ jobs:
           run: |
             pip3 install nh3 --no-index --find-links dist/ --force-reinstall
             cd tests && pytest
-      - name: Upload wheels
-        uses: actions/upload-artifact@v5
-        with:
-          name: wheels-linux-${{ matrix.target }}
-          path: dist
+#      - name: Upload wheels
+#        uses: actions/upload-artifact@v5
+#        with:
+#          name: wheels-linux-${{ matrix.target }}
+#          path: dist
 
   musllinux:
     runs-on: ubuntu-latest
